@@ -1,0 +1,38 @@
+1. Biến
+ - type varName=value;
+ - vd: float mark1=0;
+ 
+2. Địa chỉ
+Mọi biến đều có 2 thông tin giá trị và địa chỉ
+- địa chỉ là nơi hệ điều hành cấp 1 ô nhớ trên thanh ram ("nó là một ô nhớ nào đó" =)))
+
+3. Con trỏ
+ - Một con trỏ là 1 biến chứa một địa chỉ bộ nhớ. địa chỉ này là vị trí của một đối tượng khác (thường là một biến) trong bộ nhớ. Nếu một biến chứa địa chỉ của một biến khác, biến thứ nhất được gọi là trỏ đến biến thứ hai.
+ - Khai báo: type *pointerVariable;
+ - cấp phát: pointerVariable = new DataType;
+ - Hủy bộ nhớ: delete pointerVariable;
+ - vd: 
+ 	int *p;
+ 	p = new int;
+ 	*p = 100;
+ 	// *p value, p position
+ 	delete p;
+ 	
+4. Mảng
+ - Mảng là một tập hợp các biến có cùng kiểu dữ liệu nằm liên tiếp nhau trong bộ nhớ và được tham chiếu bởi một tên chung chính là tên mảng.
+ - Mỗi phần từ của mảng được tham chiếu thông qua chỉ mục (index).
+ - Khai báo: type arrayName[elements];
+ 
+5. Cấu trúc
+ - Một cấu trúc là một tập các biến được tham chiếu thông qua một tên chung. Một khai báo cấu trúc hình thành một khuôn mẫu (template) mà có thể dùng để tạo nên các biến cấu trúc có cùng kiểu. Những biến mà tạo nên cấu trúc được gọi là các thành viên (members). -> Thực ra nó là 1 kiểu dữ liệu phức hợp do ta tạo ra.
+ - Khai báo:
+ 	struct structureName {
+ 		type member_1;
+ 		type member_n;
+ 	} varNames;
+ 	
+6. Hàm
+ - là một khối lệnh thực hiện một công việc hoàn chỉnh (module), được đặt tên và được gọi thực thi nhiều lần tại nhiều vị trí trong chương trình.
+ - còn được gọi là chương trình con.
+ - có thể được gọi từ chương trình chính hoặc từ 1 hàm khác
+ - có thể trả về hoặc không. nếu hàm không có giá trị trả về gọi là thủ tục (procedure)
