@@ -3,7 +3,7 @@
  - Đệ quy giúp giải quyết bài toán theo cách nghĩ thông thường một cách tự nhiên
  - Đệ quy phải xác định được **điểm dừng**. Nếu không xác định chính xác thì làm bài toán bị sai và có thể bị lặp vĩnh viễn (Stack Overhead)
 
-### VD
+#### VD
 ```
 int giaiThua(int n)
 {
@@ -18,3 +18,18 @@ int giaiThua(int n)
 ## Đệ quy tuyến tính
  - Là trường hợp hàm chỉ gọi lại chính nó 1 lần. tương tự vd trên
  - Khi kết thúc đệ quy. Sẽ lấy giá trị trong stack theo thứ tự vào sau ra trước (Last in first out), đồng thới giải phóng bộ nhớ. và kết thúc giải thuật
+
+## Đệ quy đuôi
+ - là một trường hợp đặc biệt của đệ quy tuyến tính, Giống như tên của nó, đệ quy đuôi là hàm thực hiện gọi đệ quy ở sau cùng. 
+ #### VD
+ ```
+ int gcd(int m, int n)
+ {
+     int r;
+     if (m < n) return gcd(n, m);
+     r = m % n;
+     if (r == 0) return n;
+     else return gcd(n, r);
+ }
+ ```
+ - Nếu không có chỉ thị lệnh hay biến sau khi gọi đệ quy thì sẽ k lưu vào stack.
