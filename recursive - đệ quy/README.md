@@ -33,3 +33,14 @@ int giaiThua(int n)
  }
  ```
  - Nếu không có chỉ thị lệnh hay biến sau khi gọi đệ quy thì sẽ k lưu vào stack.
+
+## Đệ quy nhị phân - Binary recursive
+- Là dạng đệ quy 2 lần gọi chính nhó.
+#### VD
+```
+int fib(int n)
+{
+    if(n <= 2) return 1;
+    return fib(n - 1) + fib(n - 2);
+}
+```
