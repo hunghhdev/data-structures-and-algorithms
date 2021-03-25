@@ -35,12 +35,39 @@ int giaiThua(int n)
  - Nếu không có chỉ thị lệnh hay biến sau khi gọi đệ quy thì sẽ k lưu vào stack.
 
 ## Đệ quy nhị phân - Binary recursive
-- Là dạng đệ quy 2 lần gọi chính nhó.
+- Là dạng đệ quy 2 lần gọi chính nhó. Hiểu đơn giản là trong một hàm đệ quy, mà có dòng lệnh gọi chính hàm đó hai lần.
 #### VD
 ```
 int fib(int n)
 {
     if(n <= 2) return 1;
     return fib(n - 1) + fib(n - 2);
+}
+```
+
+## Đệ quy đa tuyến - Exponential recursion
+ - Một hàm được gọi là đệ quy đa tuyến nếu mỗi lần gọi đệ quy nó phát sinh ra khoảng n lần gọi đệ quy khác. Thông thường câu lệnh gọi đệ quy được đặt trong các vòng lặp.
+
+```
+void daTuyen(int i, int n, int *X)
+{
+    int val;    
+    for (val = 0; val < 2; val++)
+    {
+        X[i] = val;
+        if (i == (n-1))      
+        {
+            int j;
+            for(j = 0; j < n; j ++)     
+            {
+                cout<< X[j];
+            }
+            cout<<"\n";
+        }
+        else          
+        {
+            daTuyen(i+1, n, X); 
+        }
+    }
 }
 ```
