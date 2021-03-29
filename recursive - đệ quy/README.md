@@ -84,3 +84,19 @@ int ackerman(int m, int n){
      return ackerman(m-1, ackerman(m, n-1));
 }
 ```
+
+## Đệ quy tương hỗ  - Muatual recursion
+- là loại đệ quy không gọi đệ quy trực tiếp chính nó, mà gọi một hàm khác. Trong hàm khác lại gọi lại nó. Ví dụ A() gọi đệ quy hàm B() và trong hàm B() gọi ại đệ quy hàm A().
+```
+bool isEven(int n){
+  if(n == 0)
+    return true;
+  else
+    return isOdd(n - 1);
+}
+ 
+bool isOdd(int n){
+  return !isEven(n);
+}
+```
+
